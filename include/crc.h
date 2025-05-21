@@ -25,8 +25,8 @@
  * SUCH DAMAGE.
  */
 
-#ifndef crc_h
-#define crc_h
+#ifndef CRC_H
+#define CRC_H
 
 #include <stddef.h>
 #include <stdint.h>
@@ -41,4 +41,4 @@ extern uint16_t crc16(uint16_t, const void *, size_t);
 extern uint32_t crc32(uint32_t, const void *, size_t);
 extern uint64_t crc64(uint64_t, const void *, size_t);
 
-#endif /* crc_h */
+#endif /* CRC_H */
