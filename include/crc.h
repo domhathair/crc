@@ -49,4 +49,4 @@ extern uint64_t crc64(uint64_t, const void *, size_t);
 }
 #endif
 
-#endif /* crc_h */
+#endif /* CRC_H */
