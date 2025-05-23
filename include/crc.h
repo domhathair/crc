@@ -31,6 +31,10 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define MAXIM_CRC 0x00
 #define MODBUS_CRC 0xFFFF
 #define MPEG2_CRC 0xFFFFFFFF
@@ -41,4 +45,8 @@ extern uint16_t crc16(uint16_t, const void *, size_t);
 extern uint32_t crc32(uint32_t, const void *, size_t);
 extern uint64_t crc64(uint64_t, const void *, size_t);
 
-#endif /* CRC_H */
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* crc_h */
