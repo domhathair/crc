@@ -2,7 +2,7 @@
 #include <limits.h>
 
 extern uint8_t crc8(uint8_t crc, const void *data, size_t len) {
-    if (data == NULL)
+    if (!data)
         return (uint8_t)-1;
 
     const uint8_t *l_data = data;
@@ -31,7 +31,7 @@ extern uint8_t crc8(uint8_t crc, const void *data, size_t len) {
 }
 
 extern uint16_t crc16(uint16_t crc, const void *data, size_t len) {
-    if (data == NULL)
+    if (!data)
         return (uint16_t)-1;
 
     const uint8_t *l_data = data;
@@ -60,7 +60,7 @@ extern uint16_t crc16(uint16_t crc, const void *data, size_t len) {
 }
 
 extern uint32_t crc32(uint32_t crc, const void *data, size_t len) {
-    if (data == NULL)
+    if (!data)
         return (uint32_t)-1;
 
     const uint8_t *l_data = data;
@@ -89,7 +89,7 @@ extern uint32_t crc32(uint32_t crc, const void *data, size_t len) {
 }
 
 extern uint64_t crc64(uint64_t crc, const void *data, size_t len) {
-    if (data == NULL)
+    if (!data)
         return (uint64_t)-1;
 
     const uint8_t *l_data = data;
