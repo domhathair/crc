@@ -5,10 +5,10 @@ extern uint8_t crc8(uint8_t crc, const void *data, size_t len) {
     if (!data)
         return (uint8_t)-1;
 
-    const uint8_t *l_data = data;
+    const uint8_t *_Data = data;
     uint8_t acc;
     for (size_t i = 0; i < len; i++) {
-        acc = l_data[i] ^ crc;
+        acc = _Data[i] ^ crc;
         crc = 0;
         if ((acc & 0x01) != 0)
             crc ^= 0x5E;
@@ -34,10 +34,10 @@ extern uint16_t crc16(uint16_t crc, const void *data, size_t len) {
     if (!data)
         return (uint16_t)-1;
 
-    const uint8_t *l_data = data;
+    const uint8_t *_Data = data;
     uint8_t acc;
     for (size_t i = 0; i < len; i++) {
-        acc = l_data[i] ^ crc;
+        acc = _Data[i] ^ crc;
         crc >>= CHAR_BIT;
         if ((acc & 0x01) != 0)
             crc ^= 0xC0C1;
@@ -63,10 +63,10 @@ extern uint32_t crc32(uint32_t crc, const void *data, size_t len) {
     if (!data)
         return (uint32_t)-1;
 
-    const uint8_t *l_data = data;
+    const uint8_t *_Data = data;
     uint8_t acc;
     for (size_t i = 0; i < len; i++) {
-        acc = l_data[i] ^ crc;
+        acc = _Data[i] ^ crc;
         crc >>= CHAR_BIT;
         if ((acc & 0x01) != 0)
             crc ^= 0x04C11DB7;
@@ -92,10 +92,10 @@ extern uint64_t crc64(uint64_t crc, const void *data, size_t len) {
     if (!data)
         return (uint64_t)-1;
 
-    const uint8_t *l_data = data;
+    const uint8_t *_Data = data;
     uint8_t acc;
     for (size_t i = 0; i < len; i++) {
-        acc = l_data[i] ^ crc;
+        acc = _Data[i] ^ crc;
         crc >>= CHAR_BIT;
         if ((acc & 0x01) != 0)
             crc ^= 0x7AD870C830358979;
